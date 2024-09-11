@@ -53,7 +53,7 @@ export const authOptions: NextAuthOptions = {
     callbacks: {
         async jwt({ token, user }) {
             // Ading new feilds on JWT token ..
-          token._id = user._id;
+          token._id = user._id?.toString();
           token.isAcceptingMessage = user.isAcceptingMessage;
           token.isVerified = user.isVerified;
           token.username = user.username;

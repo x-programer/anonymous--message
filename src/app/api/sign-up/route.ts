@@ -91,7 +91,7 @@ export async function POST(request: Request) {
         //this will send response if the user has registered..
         return Response.json(
             {
-                success: false,
+                success: true,
                 message: "User register successfully. Please verify your email"
             },
             {
